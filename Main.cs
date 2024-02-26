@@ -8,5 +8,15 @@ namespace Main
         {
             Window.OpenWindow();
         }
+
+        static int RomanToNumber(string numerals)
+        {
+            if (numerals.Contains("CM"))
+            {
+                
+            }
+
+            return Convert.ToInt32(numerals);
+        }
     }
 }

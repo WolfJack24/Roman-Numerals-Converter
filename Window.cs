@@ -6,10 +6,10 @@ namespace Main
     class Window
     {
         static Form window;
-        static TextBox roman;
-        static Button convertBtn;
-        static Label originalInput;
-        static Label result;
+        public static TextBox roman;
+        public static Button convertBtn;
+        public static Label originalInput;
+        public static Label result;
 
         public static void OpenWindow()
         {
