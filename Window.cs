@@ -1,3 +1,4 @@
+using System;
 using System.Windows.Forms;
 using System.Drawing;
 
@@ -6,10 +7,27 @@ namespace Main
     class Window
     {
         static Form window;
-        public static TextBox roman;
-        public static Button convertBtn;
-        public static Label originalInput;
-        public static Label result;
+        static TextBox roman;
+        static Button convertBtn;
+        static Label originalInput;
+        static Label result;
+
+        static void _convertBtn_Click(object sender, EventArgs e)
+        {
+            string romanNumerals = roman.Text;
+
+            if (romanNumerals == "")
+            {
+                MessageBox.Show("No Roman Numerals Found!");
+            }
+            else
+            {
+                var (numberResult, originalRomanNumerals) = Program.RomanToNumber(romanNumerals);
+                originalInput.Text = "Input: " + originalRomanNumerals;
+                result.Text = "Output: " + numberResult;
+            }
+
+        }
 
         public static void OpenWindow()
         {
@@ -50,6 +68,8 @@ namespace Main
 
             originalInput.AutoSize = true;
             result.AutoSize = true;
+
+            convertBtn.Click += new EventHandler(_convertBtn_Click);
 
             window.Controls.Add(roman);
             window.Controls.Add(convertBtn);
