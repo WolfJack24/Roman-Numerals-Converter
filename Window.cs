@@ -54,14 +54,14 @@ namespace Main
 
             originalInput = new Label
             {
-                Text = "",
+                Text = "Input: ",
                 Size = new Size(121, 21),
                 Location = new Point(80, 150)
             };
 
             result = new Label
             {
-                Text = "",
+                Text = "Output: ",
                 Size = new Size(121, 21),
                 Location = new Point(80, 175)
             };
