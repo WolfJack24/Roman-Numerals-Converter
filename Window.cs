@@ -26,7 +26,6 @@ namespace Main
                 originalInput.Text = "Input: " + originalRomanNumerals;
                 result.Text = "Output: " + numberResult;
             }
-
         }
 
         public static void OpenWindow()
